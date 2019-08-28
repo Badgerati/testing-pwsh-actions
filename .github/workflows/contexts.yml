@@ -13,31 +13,37 @@ jobs:
 
     steps:
       - name: Dump GitHub Context
+        shell: pwsh
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+        run: Write-Host "$GITHUB_CONTEXT"
         
       - name: Dump Job Context
+        shell: pwsh
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT"
+        run: Write-Host "$JOB_CONTEXT"
         
       - name: Dump Steps Context
+        shell: pwsh
         env:
           STEPS_CONTEXT: ${{ toJson(steps) }}
-        run: echo "$STEPS_CONTEXT"
+        run: Write-Host "$STEPS_CONTEXT"
         
       - name: Dump Runner Context
+        shell: pwsh
         env:
           RUNNER_CONTEXT: ${{ toJson(runner) }}
-        run: echo "$RUNNER_CONTEXT"
+        run: Write-Host "$RUNNER_CONTEXT"
         
       - name: Dump Strategy Context
+        shell: pwsh
         env:
           STRATEGY_CONTEXT: ${{ toJson(strategy) }}
-        run: echo "$STRATEGY_CONTEXT"
+        run: Write-Host "$STRATEGY_CONTEXT"
         
       - name: Dump Matrix Context
+        shell: pwsh
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
-        run: echo "$MATRIX_CONTEXT"
+        run: Write-Host "$MATRIX_CONTEXT"

@@ -12,7 +12,7 @@ jobs:
 
     - name: set env var
       shell: pwsh
-      run: $env:TESTY_TEST_VAR = 'Hello, there'
+      run: [Environment]::SetEnvironmentVariable('TESTY_TEST_VAR', 'Hello, there', 'Machine')
 
     - name: output the var
       shell: pwsh

@@ -14,6 +14,6 @@ jobs:
       shell: pwsh
       run: $env:TESTY_TEST_VAR = 'Hello, there'
 
-    - name: Publish the module
+    - name: output the var
       shell: pwsh
-      run: Write-Host "Value: $($env:TESTY_TEST_VAR)"
+      run: Write-Host "Value - $($env:TESTY_TEST_VAR)"

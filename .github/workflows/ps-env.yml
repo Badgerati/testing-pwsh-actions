@@ -1,0 +1,17 @@
+name: PowerShell Environment
+
+on: [push]
+
+jobs:
+  one:
+
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+      - name: Dump PowerShell Environment
+        shell: pwsh
+        run: $PSVersionTable | Out-Default

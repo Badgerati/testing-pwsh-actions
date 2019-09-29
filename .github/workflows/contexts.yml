@@ -1,6 +1,6 @@
 name: Context Output
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   one:

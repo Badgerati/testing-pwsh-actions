@@ -1,0 +1,19 @@
+name: Test Vars
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: set env var
+      shell: pwsh
+      run: [Environment]::SetEnvironmentVariable('TESTY_TEST_VAR', 'Hello, there', 'Machine')
+
+    - name: output the var
+      shell: pwsh
+      run: Write-Host "Value - $($env:TESTY_TEST_VAR)"

@@ -16,7 +16,6 @@ jobs:
         shell: pwsh
         run: $PSVersionTable | Out-Default
 
-    steps:
       - name: Dump OS
         shell: pwsh
         run: $PSVersionTable.OS | Out-Default
